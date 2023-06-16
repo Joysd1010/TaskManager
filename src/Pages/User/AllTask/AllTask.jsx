@@ -2,12 +2,63 @@ import React from 'react';
 import useTitle from '../../Hooks/useTitle';
 import Pagetitle from '../../Hooks/Pagetitle';
 import useTask from '../../Hooks/useTask';
+import Swal from 'sweetalert2';
+import useAuth from '../../Hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 const AllTask = () => {
     useTitle('All Tasks')
+    const {user}=useAuth()
+    const navigate=useNavigate()
     const [task,refetch]=useTask()
     const showingTask=task.filter(job=>job.task_approve_status=='approved')
-
+    const handlecart = (data) => {
+        if(user){
+            const {task_name,_id,image}=data
+            const cartTask = {
+              classId: _id,
+              email: user.email,
+              image:image,
+              status:'On Progress',
+              task_name:task_name,
+           
+            };
+            fetch("http://localhost:5000/cart", {
+              method: 'POST',
+                headers: {
+                  'content-type': 'application/json'
+                },
+                body: JSON.stringify(cartTask),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.insertedId) {
+                  refetch();
+                  Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Successfully Added to MyTasks, Take necessary steps to complete this task",
+                    showConfirmButton: false,
+                    timer: 2000,
+                  })
+      
+                  
+                }
+              });
+        }
+        else{
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "Please Login in to perform a task",
+                showConfirmButton: false,
+                timer: 2000,
+              })
+              navigate('/login')
+        }
+       
+        
+      };
     
     return (
         <div className='mx-20'>
@@ -33,7 +84,7 @@ const AllTask = () => {
                         <h1> <span className='font-bold text-xl'>Task description : </span> 
                             {job.task_description}
                         </h1>
-                        <button className='btn btn-primary'>Take attempt</button>
+                        <button onClick={()=>handlecart(job)} className='btn btn-primary'>Take attempt</button>
                     </div>
                     </div>)
             }</div>

@@ -3,7 +3,7 @@ import React from 'react';
 const MyTask = () => {
     return (
         <div>
-            MY tasks are here
+            task image, task name, //action, //status
         </div>
     );
 };

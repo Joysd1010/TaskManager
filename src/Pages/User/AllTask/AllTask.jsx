@@ -14,9 +14,10 @@ const AllTask = () => {
     const showingTask=task.filter(job=>job.task_approve_status=='approved')
     const handlecart = (data) => {
         if(user){
-            const {task_name,_id,image}=data
+            const {task_name,_id,task_deadline,image}=data
             const cartTask = {
               classId: _id,
+              task_deadline:task_deadline,
               email: user.email,
               image:image,
               status:'On Progress',

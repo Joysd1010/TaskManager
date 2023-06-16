@@ -5,7 +5,7 @@ const useAdmin=()=>{
     const [adminUser,setUser]=useState([])
     const {user}=useAuth()
   
-    useEffect(()=>{fetch(`http://localhost:5000/user/${user?.email}`)
+    useEffect(()=>{fetch(`https://task-manager-server-puce.vercel.app/user/${user?.email}`)
     .then(res=>res.json())
     .then(data=>{
 

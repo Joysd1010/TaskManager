@@ -10,7 +10,7 @@ const MyTask = () => {
 //   console.log(task);
 
   const completeTask=(id,newComplete)=>{
-     fetch(`http://localhost:5000/number/${id}`, {
+     fetch(`https://task-manager-server-puce.vercel.app/number/${id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newComplete),
@@ -30,7 +30,7 @@ const MyTask = () => {
     const complete = parseInt(cartTaskId.total_completed);
     console.log(cartTaskId._id)
     const newComplete = complete + 1;
-    fetch(`http://localhost:5000/complete/${data._id}`, {
+    fetch(`https://task-manager-server-puce.vercel.app/complete/${data._id}`, {
         method: "PATCH",
         headers: { "content-type": "application/json" },
         body:JSON.stringify(data)
@@ -66,7 +66,7 @@ const MyTask = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${id}`, {
+        fetch(`https://task-manager-server-puce.vercel.app/cart/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

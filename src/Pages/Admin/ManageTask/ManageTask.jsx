@@ -21,7 +21,7 @@ const ManageTask = () => {
     const handleApprove=(data)=>{
         // console.log('get clicked',id)
     
-          fetch(`http://localhost:5000/approveTask/${data._id}`,{
+          fetch(`https://task-manager-server-puce.vercel.app/approveTask/${data._id}`,{
             method:'PATCH',
             headers:{'content-type':'application/json'},
             body:JSON.stringify({data})
@@ -56,7 +56,7 @@ const ManageTask = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/tasks/${id}`, {
+                fetch(`https://task-manager-server-puce.vercel.app/tasks/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

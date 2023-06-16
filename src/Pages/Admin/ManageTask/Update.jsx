@@ -30,7 +30,7 @@ const navigate=useNavigate()
       task_deadline: deadline,
       task_description: description,
     };
-    fetch(`http://localhost:5000/updatetask/${task._id}`, {
+    fetch(`https://task-manager-server-puce.vercel.app/updatetask/${task._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

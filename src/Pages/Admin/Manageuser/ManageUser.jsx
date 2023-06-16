@@ -13,7 +13,7 @@ const ManageUser = () => {
   const [User,refetch]=useUser()
   
   const handleAdmin = (id,name) => {
-    fetch(`http://localhost:5000/users/admin/${id}`,{
+    fetch(`https://task-manager-server-puce.vercel.app/users/admin/${id}`,{
         method:'PATCH',
         
     }).then(res=>res.json())
@@ -44,7 +44,7 @@ const ManageUser = () => {
       confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
       if (result.isConfirmed) {
-          fetch(`http://localhost:5000/deleteUser/${id}`, {
+          fetch(`https://task-manager-server-puce.vercel.app/deleteUser/${id}`, {
               method: 'DELETE'
           })
               .then(res => res.json())

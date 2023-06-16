@@ -24,7 +24,7 @@ const AllTask = () => {
               task_name:task_name,
            
             };
-            fetch("http://localhost:5000/cart", {
+            fetch("https://task-manager-server-puce.vercel.app/cart", {
               method: 'POST',
                 headers: {
                   'content-type': 'application/json'

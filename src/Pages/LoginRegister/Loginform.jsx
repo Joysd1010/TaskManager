@@ -54,7 +54,7 @@ const Form = () => {
         
               
                 const user = { name: googleUser.displayName, email: googleUser.email,role:'user' };
-        fetch("http://localhost:5000/user", {
+        fetch("https://task-manager-server-puce.vercel.app/user", {
           method: 'POST',
           headers: { "content-type": "application/json" },
           body: JSON.stringify(user),

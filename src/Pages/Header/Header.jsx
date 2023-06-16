@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { ImMenu } from "react-icons/im";
-import { GiSplitCross } from "react-icons/gi";
+import { GiCrossedBones } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../Provider/AuthProvider";
 import img from "../../assets/Task Manager.png";
@@ -29,7 +29,6 @@ const Header = () => {
     setMenu(true);
   };
 
-
   return (
     <div className="">
       <nav className=" mx-5 md:mx-20 flex items-center py-3 md:py-3 justify-between ">
@@ -39,13 +38,13 @@ const Header = () => {
             src={img}
             alt=""
           />
-          <h1 className="text-2xl md:text-5xl px-4 ">Clarionet</h1>
+          <h1 className="text-2xl md:text-5xl px-4 ">Task Manager</h1>
         </div>
         <div className="flex items-center">
           <div
             className={`flex items-center flex-col gap-3 md:flex-row md:static absolute ${
               menu ? "-top-80 right-16" : " right-16 bg-blue-200 md:bg-white px-1 py-2 rounded-lg top-10" 
-            } duration-500`}
+            } duration-500 z-20`}
           >
             <Nav menu={menu} />
             {!user ? (
@@ -89,7 +88,7 @@ const Header = () => {
               </div>
             ) : (
               <div className=" border-2 border-blue-500 p-1 rounded-lg">
-                <GiSplitCross onClick={handleMenuClose} size={20} />
+                <GiCrossedBones onClick={handleMenuClose} size={20} />
               </div>
             )}
           </div>

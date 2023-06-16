@@ -8,6 +8,8 @@ import PrivateRoute from "../Private/PrivateRoute";
 import MyTask from "../User/MyTask/MyTask";
 import AddTask from "../Admin/AddTask/AddTask";
 import ManageUser from "../Admin/Manageuser/ManageUser";
+import ManageTask from "../Admin/ManageTask/ManageTask";
+import Update from "../Admin/ManageTask/Update";
 const Router =createBrowserRouter([
     {
       path: "/",
@@ -40,6 +42,14 @@ const Router =createBrowserRouter([
         {
             path:'/manageUser',
             element:<ManageUser/>
+        },
+        {
+            path:'/manageTask',
+            element:<ManageTask/>
+        },
+        {
+            path:'/update',
+            element:<Update/>
         },
       ]
     },

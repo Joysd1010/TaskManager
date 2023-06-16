@@ -38,7 +38,7 @@ const Header = () => {
             src={img}
             alt=""
           />
-          <h1 className="text-2xl md:text-5xl px-4 ">Task Manager</h1>
+          <h1 className="text-2xl md:text-3xl px-4 ">Task Manager</h1>
         </div>
         <div className="flex items-center">
           <div
@@ -73,7 +73,7 @@ const Header = () => {
                 user?.photoURL? <img src={user?.photoURL}/>: <FaUserAlt/>
                 
               }
-                 {console.log(user?.photoURL)}
+                 {/* {console.log(user?.photoURL)} */}
 
                 </div>
               </div>

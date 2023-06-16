@@ -1,6 +1,6 @@
 import React from 'react';
 import {  NavLink } from "react-router-dom";
-import { TfiBook } from "react-icons/tfi";
+
 import useAdmin from "../Hooks/useAdmin";
 import useAuth from '../Hooks/useAuth';
 
@@ -44,7 +44,7 @@ const admin=useAdmin()
                      All tasks
                    </NavLink>}   
                    {user&&admin?<NavLink
-                     to="/managetask"
+                     to="/manageTask"
                      className={({ isActive }) =>
                        isActive
                          ? "text-blue-500 font-bold text-base md:text-xl px-5  duration-300"

@@ -25,12 +25,12 @@ const Form = () => {
   const onSubmit = (data, event) => {
     event.preventDefault();
     const { email, password } = data;
-    console.log(data)
+    // console.log(data)
 
     signIn(email, password)
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -41,7 +41,7 @@ const Form = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error.message);
+        // console.log(error.message);
         setError(error.message);
       });
   };
@@ -50,7 +50,7 @@ const Form = () => {
     googleSignIn()
       .then((result) => {
         const googleUser = result.user;
-        console.log(googleUser);
+        // console.log(googleUser);
         
               
                 const user = { name: googleUser.displayName, email: googleUser.email,role:'user' };
@@ -75,7 +75,7 @@ const Form = () => {
         
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
   return (

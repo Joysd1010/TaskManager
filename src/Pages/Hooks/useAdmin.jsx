@@ -9,7 +9,7 @@ const useAdmin=()=>{
     .then(res=>res.json())
     .then(data=>{
 
-        console.log(data.role=='admin')
+        // console.log(data.role=='admin')
         setUser(data.role==='admin')
     })},[user])
     

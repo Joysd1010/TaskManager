@@ -16,6 +16,34 @@ const ManageTask = () => {
         navigate('/update',{state:{job:job}})
 
     }
+    //--------------------updating operation for approval----------------------------
+
+    const handleApprove=(data)=>{
+        // console.log('get clicked',id)
+    
+          fetch(`http://localhost:5000/approveTask/${data._id}`,{
+            method:'PATCH',
+            headers:{'content-type':'application/json'},
+            body:JSON.stringify({data})
+            
+          })
+        .then(res=>res.json())
+        .then(data=>{
+          console.log(data)
+            if(data.modifiedCount>0){
+                refetch();
+                
+                Swal.fire({
+                position: "center",
+                icon: "success",
+                title: 'This Task is approved',
+                showConfirmButto1n: false,
+                timer: 1500,
+              })
+            }
+    
+          })
+    }
     // ------------------deleting Operation-------------------------------
     const handleDelete=(id)=>{
         Swal.fire({
@@ -80,7 +108,7 @@ const ManageTask = () => {
                         <div className='text-center'><h1>{job.total_completed}</h1></div>
                         <div><h1>{job.task_deadline}</h1></div>
                         <div><h1>{job.task_approve_status}</h1></div>
-                        <div className='flex items-center gap-2'>{job.task_approve_status=='approved'?<button disabled className='btn btn-primary'>Approve</button>:<button  className='btn btn-primary'>Approve</button>
+                        <div className='flex items-center gap-2'>{job.task_approve_status=='approved'?<button disabled className='btn btn-primary'>Approve</button>:<button onClick={()=>handleApprove(job)}  className='btn btn-primary'>Approve</button>
 
                             }
                             

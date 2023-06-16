@@ -1,0 +1,66 @@
+[
+    {
+      "task_name": "Complete Project Proposal",
+      "task_deadline": "2023-06-30",
+      "task_approve_status": "pending",
+      "total_completed": 0,
+      "task_description": "Write a detailed project proposal outlining the objectives, scope, methodology, and timeline for the project. Include the research findings, potential risks, and proposed solutions. The proposal should be comprehensive and well-structured to present a convincing case for the project's approval.",
+      "image": "https://images.ctfassets.net/gg4ddi543f5b/7GaIN0aT8gcbZLkykvHKy9/3d4c789226ebd4a63c99be05a0bd9f9a/how-to-create-a-project-proposal-blog.png"
+    },
+    {
+      "task_name": "Design UI Mockups",
+      "task_deadline": "2023-07-05",
+      "task_approve_status": "approved",
+      "total_completed": 0,
+      "task_description": "Create interactive wireframes and design visually appealing user interface (UI) mockups for the project. Pay attention to user experience (UX) principles, ensuring intuitive navigation, clear visual hierarchy, and consistent branding. Present multiple design options for review and feedback.",
+      "image": "https://studio.uxpincdn.com/studio/wp-content/uploads/2021/09/Prototype-vs-Wireframe-vs-Mockup-1024x512.png.webp"
+    },
+    {
+      "task_name": "Develop Backend Functionality",
+      "task_deadline": "2023-07-15",
+      "task_approve_status": "pending",
+      "total_completed": 0,
+      "task_description": "Build the backend functionality of the project, including data models, APIs, and database integration. Ensure optimal performance, security, and scalability. Document the codebase and follow best practices to facilitate future maintenance and updates.",
+      "image": "https://plopdo.com/wp-content/uploads/2021/10/What-is-back-end-development-2.jpg"
+    },
+    {
+      "task_name": "Perform System Testing",
+      "task_deadline": "2023-07-25",
+      "task_approve_status": "approved",
+      "total_completed": 0,
+      "task_description": "Conduct comprehensive testing of the entire system to identify and resolve any functional or performance issues. Write test cases and scenarios to cover all aspects of the project. Collaborate with the development team to fix bugs and ensure the system works as intended.",
+      "image": "https://cdn.educba.com/academy/wp-content/uploads/2019/05/System-Testing.jpg"
+    },
+    {
+      "task_name": "Create User Documentation",
+      "task_deadline": "2023-08-05",
+      "task_approve_status": "pending",
+      "total_completed": 0,
+      "task_description": "Prepare clear and concise user documentation to guide users on how to interact with the system. Document all features, functionalities, and processes, providing step-by-step instructions and visuals where necessary. Ensure the documentation is accessible and easy to understand for users of varying technical expertise.",
+      "image": "https://www.techsmith.com/blog/wp-content/uploads/2021/12/user-documentation.png"
+    },
+    {
+      "task_name": "Conduct User Acceptance Testing (UAT)",
+      "task_deadline": "2023-08-10",
+      "task_approve_status": "pending",
+      "total_completed": 0,
+      "task_description": "Engage a group of end-users to perform UAT on the system. Provide them with test cases and scenarios to validate the system's usability, functionality, and overall user experience. Collect feedback and bug reports, and collaborate with the development team to address any issues identified during the testing phase.",
+      "image": "https://www.qed42.com/sites/default/files/2020-05/User%20acceptance%20testing%20featured%20image.png"
+    },
+    {
+      "task_name": "Finalize Project Documentation",
+      "task_deadline": "2023-08-15",
+      "task_approve_status": "pending",
+      "total_completed": 0,
+      "task_description": "Compile all project documentation, including the project proposal, design mockups, technical documentation, user documentation, and test reports.",
+      "image": "https://static.helpjuice.com/helpjuice_production/uploads/upload/image/4752/direct/1642564480702-Product%20Documentation.jpg"
+    },
+    {
+      "task_name": "Deploy System to Production",
+      "task_deadline": "2023-08-20",
+      "task_approve_status": "pending",
+      "total_completed": 0,
+      "task_description": "Prepare the system for production deployment. Configure server infrastructure, set up security measures, and ensure all necessary dependencies are installed. Perform thorough testing in the production environment to verify system stability and reliability. Coordinate with stakeholders for a smooth transition from development to production.",
+      "image": "https://blog.geekhunter.com.br/wp-content/uploads/2020/11/o-que-e-deploy-e1605120444248.png"
+    }
+  ]

@@ -1,11 +1,14 @@
 import React from 'react';
 import useTitle from '../Hooks/useTitle';
+import Pagetitle from '../Hooks/Pagetitle';
+import Slider from './Slider';
 
 const Home = () => {
     useTitle('Home')
     return (
-        <div>
-            this is home
+        <div className='md:mx-20'>
+           <Pagetitle title={'Welcome to TaskManager'}/>
+           <Slider/>
         </div>
     );
 };
